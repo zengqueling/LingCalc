@@ -35,7 +35,7 @@ Carton * Egg
 
 ## 贡献
 
-非常欢迎社区的贡献！无论是代码改进、文档更新还是新功能的添加，都可以通过提交 Pull Request 来实现。鸣谢Numi.app、notepad-calculator、math.js、jquery.min.js。
+非常欢迎社区的贡献！无论是代码改进、文档更新还是新功能的添加，都可以通过提交 Pull Request 来实现。鸣谢Claude-3.5-Sonnet、Numi.app、notepad-calculator、math.js、jquery.min.js。
 其中math.js 和 jquery.min.js 可以自行更新为网上资源。
 
 ## 许可证
