@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name ="apple-mobile-web-app-status-bar-style" content ="black">
+
+
+    <title>在线Numi - 令爷文本计算器</title>
+    <script src="math.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="calc.js"></script>
+    <link href='calc.css' rel='stylesheet' type='text/css'>
+    
+    <script>
+if(('standalone' in window.navigator)&&window.navigator.standalone){
+var noddy,remotes=false;
+document.addEventListener('click',function(event){
+noddy=event.target;
+while(noddy.nodeName!=='A'&&noddy.nodeName!=='HTML') noddy=noddy.parentNode;
+if('href' in noddy&&noddy.href.indexOf('http')!==-1&&(noddy.href.indexOf(document.location.host)!==-1||remotes)){
+event.preventDefault();
+document.location.href=noddy.href;
+}
+},false);
+}
+</script>
+
+
+  </head>
+  <body>
+    <div class="left matchingArea">&nbsp;&nbsp;计算
+      <br/>
+    </div><div class="right matchingArea">
+      &nbsp;&nbsp;结果
+      <br/>
+    </div>
+
+    <div class="mainContainer">
+      <ul class="backgroundRuler matchingArea">
+      </ul>
+
+      <textarea id=inputArea wrap=off class="matchingArea left">
+      </textarea><ul id=outputArea class="matchingArea right"></ul>
+    </div>
+    <h1 title="在线Numi">令爷文本计算器 </h1>
+    <p>↑↑[点击清空计算栏]↑↑</p>  
+    <p>®®[刷新加载示例]®®</p>
+
+
+  </body>
+</html>
