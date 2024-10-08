@@ -33,7 +33,7 @@ Carton * Egg
 
 ## 贡献
 
-我们非常欢迎社区的贡献！无论是代码改进、文档更新还是新功能的添加，都可以通过提交 Pull Request 来实现。代码修改自 [notepad-calculator](https://github.com/lukasgeiter/notepad-calculator)，鸣谢 notepad-calculator。
+我们非常欢迎社区的贡献！无论是代码改进、文档更新还是新功能的添加，都可以通过提交 Pull Request 来实现。代码修改自 [notepad-calculator](https://github.com/SteveRidout/notepad-calculator/tree/master)，鸣谢 notepad-calculator。
 math.js 和 jquery.min.js 可以自行更新为网上资源。
 
 ## 许可证
