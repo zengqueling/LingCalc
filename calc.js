@@ -3,19 +3,26 @@
 $(document).ready(function () {
   var $ = window.$;
 
-  var exampleCalculation =
-    "简单算术  #自动过滤字符串#\n" +
-    "-----------------\n" +
-    "一年有多少周：" +
-    "365 / 7\n" +
-    "一个鸡蛋1.5元 * 6个鸡蛋\n" +
-    "\n" +
-    "\n" +
-    "使用变量  #英文变量名#\n" +
-    "-------------------\n" +
-    "Egg = 1.5\n" +
-    "Carton = 6\n" +
-    "Carton * Egg\n";
+var exampleCalculation =
+  "##基础运算 \n" +
+  "3^2 \n" +
+  "一个鸡蛋1.5元 * 6个鸡蛋 \n" +
+  "\n" +
+  "##变量和函数\n" +
+  "a= -9  \n" +
+  "b= 11 \n" +
+  "sum(a,b) \n" +
+  "mean(a,b) \n" +
+  "a > b ? b:a \n" +
+  "random() \n" +
+  "pi \n" +
+  "sin(45) \n" +
+  "sqrt(9) \n" +
+  "\n" +
+  "##单位转换\n" +
+  "12 cm to inches \n" +
+  "450g to kg \n" +
+  "1 day in minutes \n";
 
   var $inputArea = $("#inputArea"),
     $outputArea = $("#outputArea");
@@ -24,9 +31,9 @@ $(document).ready(function () {
 
   var previousAnswerLines = []; // 保存旧答案的副本，以查看变化
 
-  // 修改过滤表达式函数，保留变量名和运算符
+// 修改过滤表达式函数，保留变量名和运算符。
 function filterExpression(expr) {
-  return expr.replace(/[^a-zA-Z0-9\s+\-*/%().=&|^!<>?:]/g, '');
+  return expr.replace(/[^a-zA-Z0-9\s+\-*/%().=&|^!<>?:,\[\]#\.]/g, '');
 }
 
   var calculateAnswers = function () {
@@ -44,10 +51,10 @@ function filterExpression(expr) {
     // 使用math.evaluate()计算答案
     $.each(lines, function (i, line) {
       try {
-        // 移除所有注释行
-        if (line[0] && line[0] === "#") {
-          return;
-        }
+            // 检查是否为注释行，以#开头的行
+            if (line[0] && line[0] === "#") {
+                return;
+                }
 
         if (line.length > 0) {
           // 过滤表达式，保留变量名和数学运算符
@@ -95,7 +102,7 @@ function filterExpression(expr) {
         if (Number.isInteger(line)) {
           row = math.format(line, {notation: 'fixed', precision: 0}); // 保留整数
         } else {
-          row = math.format(line, {notation: 'fixed', precision: 2}); // 显示三位小数
+          row = math.format(line, {notation: 'fixed', precision: 3}); // 显示三位小数
         }
       } else {
         row = "&nbsp;";
